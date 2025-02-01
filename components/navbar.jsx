@@ -9,6 +9,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { Package } from 'lucide-react'
 
 import {
 
@@ -33,8 +34,9 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-blue-600">
-              StockLot Hub
+          <Link href="/" className="flex items-center space-x-2 text-blue-600">
+              <Package className="h-6 w-6" />
+              <span className="font-bold">Sell Any Stock</span>
             </Link>
           </div>
 

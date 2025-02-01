@@ -11,9 +11,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2 text-blue-600">
               <Package className="h-6 w-6" />
-              <span className="font-bold">StockLot Hub</span>
+              <span className="font-bold">Sell Any Stock</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               Bangladesh's premier marketplace for garment stocklots, factory surplus, and export excess.
