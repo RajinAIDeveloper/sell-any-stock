@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { CardContent } from "@/components/ui/card";
 import { Shirt, Factory, TrendingUp, Shield, CheckCircle } from 'lucide-react';
 import MotionCard from '@/components/ui/motion-card';
+import Link from 'next/link';
 
 const HomePage = () => {
    // Animation variants remain the same
@@ -125,6 +126,7 @@ const HomePage = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
+                <Link href="/dashboard/seller">
                 <Button 
                   variant="secondary" 
                   size="lg"
@@ -132,6 +134,8 @@ const HomePage = () => {
                 >
                   List Your Stock
                 </Button>
+                </Link>
+                <Link href="/dashboard/buyer">
                 <Button 
                   variant="outline" 
                   size="lg" 
@@ -139,6 +143,8 @@ const HomePage = () => {
                 >
                   Start Buying
                 </Button>
+                </Link>
+                
               </motion.div>
             </motion.div>
             

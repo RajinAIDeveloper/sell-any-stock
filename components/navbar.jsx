@@ -58,7 +58,7 @@ const Navbar = () => {
                   href="/sign-in"
                   className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 transition-colors"
                 >
-                  Login / Register
+                  Get Started
                 </Link>
             </SignedOut>
             <SignedIn>
@@ -96,7 +96,7 @@ const Navbar = () => {
                       className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
                       onClick={() => setIsOpen(false)}
                     >
-                      Login / Register
+                      Get Started
                     </Link>
             </SignedOut>
             <SignedIn>
