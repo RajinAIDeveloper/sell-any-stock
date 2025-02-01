@@ -10,6 +10,14 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 
+import {
+
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -42,12 +50,19 @@ const Navbar = () => {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/login"
-                className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 transition-colors"
-              >
-                Login / Register
-              </Link>
+              
+              <SignedOut>
+                <Link
+                  href="/sign-in"
+                  className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 transition-colors"
+                >
+                  Login / Register
+                </Link>
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+              
             </div>
           </div>
 
@@ -73,13 +88,19 @@ const Navbar = () => {
                         {link.label}
                       </Link>
                     ))}
+                    <SignedOut>
                     <Link
-                      href="/login"
+                      href="/sign-in"
                       className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
                       onClick={() => setIsOpen(false)}
                     >
                       Login / Register
                     </Link>
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+                    
                   </nav>
                 </div>
               </SheetContent>
